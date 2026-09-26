@@ -5,6 +5,9 @@ on:
     - cron: "0 3 * * *"   # rebuilds once a day
   workflow_dispatch:       # and whenever you run it manually
 
+permissions:
+  contents: write        # lets the workflow push the generated snake to the output branch
+
 jobs:
   build:
     runs-on: ubuntu-latest
